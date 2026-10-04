@@ -1,0 +1,312 @@
+{
+  "$comentario": "IPADECP — tokens de marca en JSON. Espejo exacto de tokens.css, para herramientas de diseño (Figma Tokens, Style Dictionary) y para agentes que generan piezas gráficas. Si editas uno, edita el otro.",
+  "marca": {
+    "nombre": "IPADECP",
+    "nombreCompleto": "Instituto Peruano Americano de Desarrollo y Capacitación Profesional",
+    "dominio": "ipadecp.com.pe",
+    "whatsapp": "992 951 855",
+    "desde": 2015
+  },
+  "color": {
+    "navy": {
+      "100": {
+        "valor": "#e8eef6",
+        "uso": "navy lavado, chips"
+      },
+      "500": {
+        "valor": "#001331",
+        "uso": "navy de texto, titulares"
+      },
+      "600": {
+        "valor": "#1c3d6b",
+        "uso": "superficie elevada sobre navy"
+      },
+      "700": {
+        "valor": "#10284d",
+        "uso": "PRIMARIO de marca",
+        "primario": true,
+        "contraste": {
+          "sobreBlanco": 14.66,
+          "sobreSuave": 13.63
+        }
+      },
+      "800": {
+        "valor": "#0a1c38",
+        "uso": "hover del primario"
+      },
+      "900": {
+        "valor": "#06142b",
+        "uso": "fondo oscuro profundo"
+      },
+      "050": {
+        "valor": "#f4f7fa",
+        "uso": "fondo suave del sitio"
+      }
+    },
+    "celeste": {
+      "100": {
+        "valor": "#dcf0f8",
+        "uso": "superficie de chip"
+      },
+      "500": {
+        "valor": "#6cb3d3",
+        "uso": "CELESTE de marca, decorativo",
+        "secundario": true,
+        "advertencia": "2.33:1 sobre blanco. Prohibido como texto sobre fondo claro. Sobre navy da 6.30:1 y sí sirve."
+      },
+      "700": {
+        "valor": "#2f7593",
+        "uso": "botón sólido con texto blanco",
+        "contraste": {
+          "sobreBlanco": 5.14
+        }
+      },
+      "800": {
+        "valor": "#0b6683",
+        "uso": "texto y links",
+        "contraste": {
+          "sobreBlanco": 6.48
+        }
+      },
+      "050": {
+        "valor": "#f0f9fd",
+        "uso": "superficie apenas teñida"
+      }
+    },
+    "rojo": {
+      "600": {
+        "valor": "#c6111a",
+        "uso": "ROJO institucional del logotipo. Reservado a sello, certificado y verificación.",
+        "acento": true,
+        "origen": "muestreado del archivo del logotipo",
+        "contraste": {
+          "sobreBlanco": 6.01
+        }
+      },
+      "700": {
+        "valor": "#9d0d14",
+        "uso": "hover / texto",
+        "contraste": {
+          "sobreBlanco": 8.4
+        }
+      },
+      "050": {
+        "valor": "#fdf0f1",
+        "uso": "superficie del sello"
+      }
+    },
+    "neutro": {
+      "tinta": {
+        "valor": "#1f2d3d",
+        "uso": "texto principal",
+        "contraste": {
+          "sobreBlanco": 13.99
+        }
+      },
+      "gris": {
+        "valor": "#5a6878",
+        "uso": "texto secundario",
+        "contraste": {
+          "sobreBlanco": 5.7,
+          "sobreSuave": 5.3
+        },
+        "reemplazaA": "#6b7a8d (4.07:1 sobre el fondo suave, reprobaba AA)"
+      },
+      "grisTenue": {
+        "valor": "#8492a3",
+        "uso": "solo decorativo, nunca texto"
+      },
+      "borde": {
+        "valor": "#e1e8ed"
+      },
+      "bordeFuerte": {
+        "valor": "#c9d5df"
+      },
+      "blanco": {
+        "valor": "#ffffff"
+      },
+      "bordeCampo": {
+        "valor": "#768495",
+        "uso": "borde de input",
+        "contraste": {
+          "sobreSuave": 3.55
+        },
+        "nota": "WCAG 1.4.11 pide 3:1 para controles de interfaz. El #c9d5df anterior daba 1.39:1."
+      }
+    },
+    "estado": {
+      "ok": {
+        "relleno": "#2e9e5b",
+        "texto": "#15703a",
+        "superficie": "#eaf7ef"
+      },
+      "error": {
+        "relleno": "#d64545",
+        "texto": "#b53232",
+        "superficie": "#fdeded"
+      },
+      "aviso": {
+        "relleno": "#b8860b",
+        "texto": "#845c08",
+        "superficie": "#fdf5e3"
+      }
+    },
+    "logotipo": {
+      "$comentario": "Colores medidos del archivo del logo. Son de referencia: NO se usan como colores de interfaz salvo el rojo, que sí entra al sistema.",
+      "rojo": "#c6111a",
+      "azul": "#0130db",
+      "cian": "#00e4ff",
+      "negro": "#000000"
+    },
+    "oro": {
+      "500": {
+        "valor": "#d4af37",
+        "uso": "decorativo: degradados, bordes, fondos",
+        "advertencia": "2.10:1. No sirve para glifos ni texto."
+      },
+      "700": {
+        "valor": "#ad8420",
+        "uso": "estrellas, iconos y cualquier glifo que deba verse",
+        "contraste": {
+          "sobreBlanco": 3.44
+        }
+      },
+      "$comentario": "No es color de marca: es el color de un LOGRO. Estrellas de valoracion, sello del certificado, racha de estudio y estados de logro del aula. 13 usos reales en src/.",
+      "050": {
+        "valor": "#fdf8e8",
+        "uso": "superficie de logro"
+      }
+    }
+  },
+  "tipografia": {
+    "titulo": {
+      "familia": "Hanken Grotesk",
+      "pesos": [
+        400,
+        600,
+        700,
+        800
+      ],
+      "uso": "titulares, botones, marca",
+      "carga": "next/font/google, eje variable, auto-alojada"
+    },
+    "texto": {
+      "familia": "Inter",
+      "pesos": [
+        400,
+        500,
+        600
+      ],
+      "uso": "cuerpo, interfaz, formularios",
+      "carga": "next/font/google, eje variable, auto-alojada"
+    },
+    "codigo": {
+      "familia": "ui-monospace / pila del sistema",
+      "uso": "código corto, número de registro, DNI"
+    },
+    "retirada": {
+      "familia": "Geist",
+      "motivo": "se descargaba por next/font pero tema-stitch.css la pisaba en body: no se veia en ninguna parte. Retirada.",
+      "estado": "aplicado"
+    }
+  },
+  "forma": {
+    "$comentario": "La pildora se retiro del sistema: hacia que todo pareciera una aplicacion de consumo y no un instituto que emite certificados. Escala 8 / 10 / 16 por rol.",
+    "radioChip": "8px",
+    "radioBoton": "10px",
+    "radioCampo": "10px",
+    "radioTarjeta": "16px",
+    "radioRedondo": {
+      "valor": "9999px",
+      "uso": "solo avatares y puntos de estado. Nunca un boton."
+    },
+    "sombra1": "0 4px 10px rgba(10,28,56,.12)",
+    "sombra2": "0 8px 20px rgba(10,28,56,.18)",
+    "sombraPrimario": "0 6px 16px rgba(16,40,77,.28)",
+    "sombraSello": "0 6px 16px rgba(198,17,26,.26)"
+  },
+  "layout": {
+    "anchoMaximo": "1180px",
+    "anchoLectura": "65ch",
+    "altoHeader": "68px",
+    "altoHeaderMovil": "60px",
+    "puntosDeCorte": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280
+    }
+  },
+  "degradados": {
+    "$comentario": "El libro del logotipo ya es un degradado de cian a azul: de ahi sale el sistema. REGLA: un degradado con texto blanco encima es accesible solo si su parada MAS CLARA pasa 4.5:1. Cada valor lleva medida su parada clara.",
+    "primario": {
+      "valor": "linear-gradient(135deg, #10284d 0%, #24608f 100%)",
+      "paradaClara": "#24608f",
+      "contraste": 6.68,
+      "uso": "boton primario, superficies navy"
+    },
+    "primarioHover": {
+      "valor": "linear-gradient(135deg, #0a1c38 0%, #1c4d7a 100%)",
+      "paradaClara": "#1c4d7a",
+      "contraste": 8.78
+    },
+    "secundario": {
+      "valor": "linear-gradient(135deg, #0b6683 0%, #307a99 100%)",
+      "paradaClara": "#307a99",
+      "contraste": 4.81,
+      "uso": "boton secundario"
+    },
+    "secundarioHover": {
+      "valor": "linear-gradient(135deg, #084f66 0%, #2f7593 100%)",
+      "paradaClara": "#2f7593",
+      "contraste": 5.14
+    },
+    "sello": {
+      "valor": "linear-gradient(135deg, #c6111a 0%, #8f0c12 100%)",
+      "paradaClara": "#c6111a",
+      "contraste": 6.01,
+      "uso": "SOLO certificacion y verificacion"
+    },
+    "selloHover": {
+      "valor": "linear-gradient(135deg, #9d0d14 0%, #7d0a10 100%)",
+      "paradaClara": "#9d0d14",
+      "contraste": 8.4
+    },
+    "ok": {
+      "valor": "linear-gradient(135deg, #1c7a44 0%, #15703a 100%)",
+      "paradaClara": "#1c7a44",
+      "contraste": 5.36,
+      "uso": "chip de estado vigente/emitido"
+    },
+    "marca": {
+      "valor": "linear-gradient(135deg, #06142b 0%, #10284d 45%, #2f7593 100%)",
+      "uso": "superficies grandes: heroe, footer, portadas. Nunca texto chico."
+    },
+    "libro": {
+      "valor": "linear-gradient(135deg, #00e4ff 0%, #0130db 100%)",
+      "uso": "DECORATIVO, sale del libro del logotipo. Prohibido texto encima.",
+      "advertencia": "demasiado claro para texto blanco"
+    }
+  },
+  "logotipo": {
+    "$comentario": "Ver branding/logotipo/LEEME.md",
+    "vectorReal": {
+      "archivo": "logotipo/vectorial/logotipo-una-tinta.svg",
+      "metodo": "marching squares interpolado + Douglas-Peucker sobre el canal alfa",
+      "contornos": 161,
+      "puntos": 2800,
+      "peso": "29 KB",
+      "fidelidad": "3.9 % de diferencia medida contra el original"
+    },
+    "aColor": {
+      "nota": "no vectorizable: el globo y el libro tienen degradados continuos. Su .svg es un contenedor de mapa de bits."
+    },
+    "perfilRedes": {
+      "nota": "las redes recortan en circulo. El logo va reducido para que su diagonal entre en un circulo seguro del 82 % del lado.",
+      "anchoLogotipo": 669,
+      "anchoIsotipo": 722,
+      "lienzo": 1080
+    },
+    "reglaFondo": "a color solo sobre fondo claro. Sobre oscuro va la version de una tinta blanca."
+  }
+}

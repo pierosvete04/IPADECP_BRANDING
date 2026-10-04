@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+# Pasa los 100 MB que acepta GitHub; su contenido ya está en "11 GOOGLE FLOW/"
+11 GOOGLE FLOW.zip

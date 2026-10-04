@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40" width="1200" height="40"><title>Barra de avance</title><defs><linearGradient id="lb" gradientUnits="userSpaceOnUse" x1="290.0" y1="-290.0" x2="910.0" y2="330.0"><stop offset="0" stop-color="#00e4ff"/><stop offset="1" stop-color="#0130db"/></linearGradient></defs><rect width="1200" height="40" rx="8" fill="#e8eef6"/><rect width="840" height="40" rx="8" fill="url(#lb)"/></svg>

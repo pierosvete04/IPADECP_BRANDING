@@ -1,0 +1,144 @@
+/* ============================================================
+   IPADECP — Tokens de marca
+   Fuente única de verdad del color de la marca.
+
+   Todo valor de aquí está medido, no elegido a ojo: los ratios de
+   contraste anotados son WCAG 2.1 calculados sobre los dos fondos
+   reales del sitio (#ffffff y #f4f7fa). Si cambias un hex, vuelve a
+   correr la auditoría antes de subirlo (ver ./color.md §5).
+
+   Cómo se usa: este archivo se importa ANTES de estilos.css, y
+   estilos.css / tema-stitch.css toman sus variables de aquí en vez
+   de repetir los hex. No dupliques un color: si lo necesitas, ya
+   está abajo con nombre.
+   ============================================================ */
+
+:root{
+
+  /* ---------- 1. Navy — color primario ----------
+     El azul institucional. Es el color con el que se lee IPADECP:
+     encabezados, botones primarios, superficies oscuras. */
+  --ipd-navy-900: #06142b;   /* fondo oscuro profundo (footer, modo oscuro) */
+  --ipd-navy-800: #0a1c38;   /* navy oscuro — hover del primario */
+  --ipd-navy-700: #10284d;   /* ★ NAVY IPADECP — color primario de la marca */
+  --ipd-navy-600: #1c3d6b;   /* superficies elevadas sobre navy */
+  --ipd-navy-500: #001331;   /* navy de TEXTO (más denso, para titulares) */
+  --ipd-navy-100: #e8eef6;   /* navy lavado — chips, fondos de sección */
+  --ipd-navy-050: #f4f7fa;   /* ★ fondo suave del sitio */
+
+  /* ---------- 2. Celeste — color secundario ----------
+     Sale del libro abierto del logotipo. REGLA DURA: el celeste de
+     marca (#6cb3d3) NO sirve como texto sobre fondo claro — da 2.33:1
+     y reprueba AA. Sobre navy sí (6.30:1). Para texto o botón sólido
+     sobre claro se usa celeste-700. */
+  --ipd-celeste-800: #0b6683; /* celeste profundo — texto y links (6.48:1) */
+  --ipd-celeste-700: #2f7593; /* ★ celeste accesible — botón sólido + texto blanco (5.14:1) */
+  --ipd-celeste-500: #6cb3d3; /* ★ CELESTE IPADECP — decorativo: bordes, íconos, fondos, y texto SOLO sobre navy */
+  --ipd-celeste-100: #dcf0f8; /* superficie celeste — chips, avisos suaves */
+  --ipd-celeste-050: #f0f9fd; /* superficie celeste apenas teñida */
+
+  /* ---------- 3. Rojo institucional ----------
+     El rojo del arco del logotipo (#c6111a, tomado del archivo, no
+     aproximado). Es el color más distintivo de la marca y hasta hoy
+     no existía en el sistema digital: por eso el sitio y el logo no
+     se parecían. NO es un rojo de error — para eso está --ipd-error.
+     USO RESERVADO: sello, certificado, verificación de QR, y nada más.
+     Ver ./color.md §3. */
+  --ipd-rojo-700: #9d0d14;   /* hover / texto sobre claro (8.40:1) */
+  --ipd-rojo-600: #c6111a;   /* ★ ROJO IPADECP — pasa AA sobre blanco (6.01:1) y como relleno con texto blanco */
+  --ipd-rojo-050: #fdf0f1;   /* superficie del sello */
+
+  /* ---------- 3b. Oro de logro ----------
+     No es un color de marca: es el color de un LOGRO. Vive en las estrellas
+     de las valoraciones, el sello del certificado, la racha de estudio y los
+     estados de logro del aula. Ya estaba en el producto (13 usos) con el
+     nombre --st-premium-gold; acá entra al sistema con la regla que le
+     faltaba. */
+  --ipd-oro-500: #d4af37;  /* decorativo: degradados, bordes, fondos (2.10:1, NO para glifos) */
+  --ipd-oro-700: #ad8420;  /* estrellas, íconos y cualquier glifo que deba verse (3.44:1) */
+  --ipd-oro-050: #fdf8e8;  /* superficie de logro */
+
+  /* ---------- 4. Neutros de texto ---------- */
+  --ipd-tinta:      #1f2d3d; /* texto principal (13.99:1) */
+  --ipd-gris:       #5a6878; /* ★ texto secundario (5.70:1 blanco / 5.30:1 suave)
+                                CORRIGE al antiguo #6b7a8d, que daba 4.07:1
+                                sobre el fondo suave y reprobaba AA. */
+  --ipd-gris-tenue: #8492a3; /* SOLO decorativo: íconos apagados, separadores.
+                                Nunca texto que haya que leer. */
+  --ipd-borde:      #e1e8ed; /* bordes de tarjeta y campo */
+  --ipd-borde-fuerte: #c9d5df; /* separador marcado, borde de tabla */
+  /* Borde de INPUT. WCAG 1.4.11 pide 3:1 contra el fondo para cualquier
+     control de interfaz: el #c9d5df anterior daba 1.39:1 y dejaba campos
+     que en la práctica no se veían. Este da 3.55:1. */
+  --ipd-borde-campo:  #768495;
+  --ipd-blanco:     #ffffff;
+
+  /* ---------- 5. Estado (no son colores de marca) ----------
+     Cada estado tiene DOS valores: el de relleno (fondo del badge,
+     ícono) y el -texto, más oscuro, que es el único que puede
+     escribirse sobre fondo claro. */
+  --ipd-ok:            #2e9e5b;  --ipd-ok-texto:    #15703a;  --ipd-ok-050:    #eaf7ef;
+  --ipd-error:         #d64545;  --ipd-error-texto: #b53232;  --ipd-error-050: #fdeded;
+  --ipd-aviso:         #b8860b;  --ipd-aviso-texto: #845c08;  --ipd-aviso-050: #fdf5e3;
+
+  /* ---------- 6. Degradados ----------
+     No son un adorno arbitrario: el libro abierto del logotipo YA es un
+     degradado de cian a azul. El sistema lo extiende al resto de la
+     interfaz, con una regla dura de accesibilidad.
+
+     REGLA: un degradado con texto blanco encima es accesible solo si su
+     PARADA MÁS CLARA pasa 4.5:1. De nada sirve que el promedio pase si
+     la esquina clara deja el texto ilegible. Cada valor de abajo está
+     medido por su parada clara. Ver ./color.md §7. */
+  --ipd-grad-primario:        linear-gradient(135deg, #10284d 0%, #24608f 100%); /* clara 6.68:1 */
+  --ipd-grad-primario-hover:  linear-gradient(135deg, #0a1c38 0%, #1c4d7a 100%); /* clara 8.78:1 */
+  --ipd-grad-secundario:      linear-gradient(135deg, #0b6683 0%, #307a99 100%); /* clara 4.81:1 */
+  --ipd-grad-secundario-hover:linear-gradient(135deg, #084f66 0%, #2f7593 100%); /* clara 5.14:1 */
+  --ipd-grad-sello:           linear-gradient(135deg, #c6111a 0%, #8f0c12 100%); /* clara 6.01:1 */
+  --ipd-grad-sello-hover:     linear-gradient(135deg, #9d0d14 0%, #7d0a10 100%); /* clara 8.40:1 */
+  --ipd-grad-ok:              linear-gradient(135deg, #1c7a44 0%, #15703a 100%); /* clara 5.36:1 */
+  /* Superficies grandes: héroe, footer, portadas. Nunca lleva texto chico. */
+  --ipd-grad-marca:           linear-gradient(135deg, #06142b 0%, #10284d 45%, #2f7593 100%);
+  /* El degradado del libro del logotipo. DECORATIVO: fondos de ilustración,
+     filos, barras de progreso. Prohibido poner texto encima. */
+  --ipd-grad-libro:           linear-gradient(135deg, #00e4ff 0%, #0130db 100%);
+
+  /* ---------- 7. Elevación ----------
+     Dos niveles y nada más. La sombra lleva el tinte del navy, nunca
+     negro puro: el negro sobre fondo azulado se ve sucio. */
+  --ipd-sombra-1: 0 4px 10px rgba(10,28,56,.12);
+  --ipd-sombra-2: 0 8px 20px rgba(10,28,56,.18);
+  --ipd-sombra-navy: 0 10px 28px rgba(10,30,55,.18);
+  /* Sombra de botón con degradado: tintada del color del propio botón,
+     para que el relieve se vea del mismo material y no gris encima. */
+  --ipd-sombra-primario: 0 6px 16px rgba(16,40,77,.28);
+  --ipd-sombra-sello:    0 6px 16px rgba(198,17,26,.26);
+
+  /* ---------- 8. Forma ----------
+     La marca NO es de esquinas redondas. La píldora se retiró del
+     sistema: hacía que todo pareciera un botón de aplicación de consumo
+     y no un instituto que emite certificados. La escala es 8 / 10 / 16,
+     asignada por rol y no por gusto. Ver ./color.md §6. */
+  --ipd-radio-chip:    8px;    /* chips, badges, etiquetas */
+  --ipd-radio-boton:  10px;    /* botones, tabs */
+  --ipd-radio-campo:  10px;    /* inputs, selects, textarea */
+  --ipd-radio-tarjeta:16px;    /* tarjetas, modales, paneles */
+  /* Único círculo permitido: avatares y puntos de estado. Nunca un botón. */
+  --ipd-radio-redondo: 9999px;
+
+  /* ---------- 9. Tipografía ----------
+     Dos familias. Ninguna tercera. Ver ./tipografia.md */
+  --ipd-font-titulo: 'Hanken Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --ipd-font-texto:  'Inter', 'Segoe UI', system-ui, sans-serif;
+  /* Para códigos que la persona va a copiar o dictar: código corto del
+     certificado, número de registro, DNI. Pila del sistema, sin descarga. */
+  --ipd-font-codigo: ui-monospace, 'Cascadia Mono', 'Segoe UI Mono', 'SF Mono', Menlo, monospace;
+
+  /* ---------- 10. Ritmo vertical ----------
+     Escala de 4px. Las secciones de la web pública respiran en
+     --ipd-seccion; el panel admin, más denso, en --ipd-seccion-densa. */
+  --ipd-seccion:       clamp(4rem, 8vw, 7rem);
+  --ipd-seccion-densa: clamp(2rem, 4vw, 3.5rem);
+  --ipd-ancho-maximo:  1180px;  /* contenedor de la web pública */
+  --ipd-ancho-lectura: 65ch;    /* párrafos largos */
+}

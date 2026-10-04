@@ -1,0 +1,461 @@
+[
+  {
+    "nombre": "Navy 900",
+    "hex": "#06142b",
+    "rgb": [
+      6,
+      20,
+      43
+    ],
+    "cmyk": [
+      86,
+      53,
+      0,
+      83
+    ],
+    "rol": "Fondo oscuro profundo",
+    "contraste_blanco": 18.38
+  },
+  {
+    "nombre": "Navy 800",
+    "hex": "#0a1c38",
+    "rgb": [
+      10,
+      28,
+      56
+    ],
+    "cmyk": [
+      82,
+      50,
+      0,
+      78
+    ],
+    "rol": "Hover del primario",
+    "contraste_blanco": 16.99
+  },
+  {
+    "nombre": "Navy IPADECP",
+    "hex": "#10284d",
+    "rgb": [
+      16,
+      40,
+      77
+    ],
+    "cmyk": [
+      79,
+      48,
+      0,
+      70
+    ],
+    "rol": "Primario de la marca",
+    "contraste_blanco": 14.66
+  },
+  {
+    "nombre": "Navy 600",
+    "hex": "#1c3d6b",
+    "rgb": [
+      28,
+      61,
+      107
+    ],
+    "cmyk": [
+      74,
+      43,
+      0,
+      58
+    ],
+    "rol": "Superficie elevada",
+    "contraste_blanco": 10.89
+  },
+  {
+    "nombre": "Navy de texto",
+    "hex": "#001331",
+    "rgb": [
+      0,
+      19,
+      49
+    ],
+    "cmyk": [
+      100,
+      61,
+      0,
+      81
+    ],
+    "rol": "Titulares",
+    "contraste_blanco": 18.46
+  },
+  {
+    "nombre": "Navy lavado",
+    "hex": "#e8eef6",
+    "rgb": [
+      232,
+      238,
+      246
+    ],
+    "cmyk": [
+      6,
+      3,
+      0,
+      4
+    ],
+    "rol": "Chips y secciones",
+    "contraste_blanco": 1.17
+  },
+  {
+    "nombre": "Fondo suave",
+    "hex": "#f4f7fa",
+    "rgb": [
+      244,
+      247,
+      250
+    ],
+    "cmyk": [
+      2,
+      1,
+      0,
+      2
+    ],
+    "rol": "Fondo del sitio",
+    "contraste_blanco": 1.08
+  },
+  {
+    "nombre": "Celeste profundo",
+    "hex": "#0b6683",
+    "rgb": [
+      11,
+      102,
+      131
+    ],
+    "cmyk": [
+      92,
+      22,
+      0,
+      49
+    ],
+    "rol": "Texto y enlaces",
+    "contraste_blanco": 6.48
+  },
+  {
+    "nombre": "Celeste accesible",
+    "hex": "#2f7593",
+    "rgb": [
+      47,
+      117,
+      147
+    ],
+    "cmyk": [
+      68,
+      20,
+      0,
+      42
+    ],
+    "rol": "Botón sólido",
+    "contraste_blanco": 5.14
+  },
+  {
+    "nombre": "Celeste IPADECP",
+    "hex": "#6cb3d3",
+    "rgb": [
+      108,
+      179,
+      211
+    ],
+    "cmyk": [
+      49,
+      15,
+      0,
+      17
+    ],
+    "rol": "Decorativo; texto solo sobre navy",
+    "contraste_blanco": 2.33
+  },
+  {
+    "nombre": "Celeste 100",
+    "hex": "#dcf0f8",
+    "rgb": [
+      220,
+      240,
+      248
+    ],
+    "cmyk": [
+      11,
+      3,
+      0,
+      3
+    ],
+    "rol": "Superficie de chip",
+    "contraste_blanco": 1.18
+  },
+  {
+    "nombre": "Celeste 050",
+    "hex": "#f0f9fd",
+    "rgb": [
+      240,
+      249,
+      253
+    ],
+    "cmyk": [
+      5,
+      2,
+      0,
+      1
+    ],
+    "rol": "Superficie teñida",
+    "contraste_blanco": 1.07
+  },
+  {
+    "nombre": "Rojo 700",
+    "hex": "#9d0d14",
+    "rgb": [
+      157,
+      13,
+      20
+    ],
+    "cmyk": [
+      0,
+      92,
+      87,
+      38
+    ],
+    "rol": "Hover y texto",
+    "contraste_blanco": 8.4
+  },
+  {
+    "nombre": "Rojo IPADECP",
+    "hex": "#c6111a",
+    "rgb": [
+      198,
+      17,
+      26
+    ],
+    "cmyk": [
+      0,
+      91,
+      87,
+      22
+    ],
+    "rol": "Sello, certificado, verificación",
+    "contraste_blanco": 6.01
+  },
+  {
+    "nombre": "Rojo 050",
+    "hex": "#fdf0f1",
+    "rgb": [
+      253,
+      240,
+      241
+    ],
+    "cmyk": [
+      0,
+      5,
+      5,
+      1
+    ],
+    "rol": "Superficie del sello",
+    "contraste_blanco": 1.11
+  },
+  {
+    "nombre": "Oro de glifo",
+    "hex": "#ad8420",
+    "rgb": [
+      173,
+      132,
+      32
+    ],
+    "cmyk": [
+      0,
+      24,
+      82,
+      32
+    ],
+    "rol": "Estrellas e íconos",
+    "contraste_blanco": 3.44
+  },
+  {
+    "nombre": "Oro de logro",
+    "hex": "#d4af37",
+    "rgb": [
+      212,
+      175,
+      55
+    ],
+    "cmyk": [
+      0,
+      17,
+      74,
+      17
+    ],
+    "rol": "Relleno y bordes",
+    "contraste_blanco": 2.1
+  },
+  {
+    "nombre": "Oro 050",
+    "hex": "#fdf8e8",
+    "rgb": [
+      253,
+      248,
+      232
+    ],
+    "cmyk": [
+      0,
+      2,
+      8,
+      1
+    ],
+    "rol": "Superficie de logro",
+    "contraste_blanco": 1.06
+  },
+  {
+    "nombre": "Tinta",
+    "hex": "#1f2d3d",
+    "rgb": [
+      31,
+      45,
+      61
+    ],
+    "cmyk": [
+      49,
+      26,
+      0,
+      76
+    ],
+    "rol": "Texto principal",
+    "contraste_blanco": 13.99
+  },
+  {
+    "nombre": "Gris",
+    "hex": "#5a6878",
+    "rgb": [
+      90,
+      104,
+      120
+    ],
+    "cmyk": [
+      25,
+      13,
+      0,
+      53
+    ],
+    "rol": "Texto secundario",
+    "contraste_blanco": 5.7
+  },
+  {
+    "nombre": "Gris tenue",
+    "hex": "#8492a3",
+    "rgb": [
+      132,
+      146,
+      163
+    ],
+    "cmyk": [
+      19,
+      10,
+      0,
+      36
+    ],
+    "rol": "Solo decorativo",
+    "contraste_blanco": 3.17
+  },
+  {
+    "nombre": "Borde de campo",
+    "hex": "#768495",
+    "rgb": [
+      118,
+      132,
+      149
+    ],
+    "cmyk": [
+      21,
+      11,
+      0,
+      42
+    ],
+    "rol": "Borde de input",
+    "contraste_blanco": 3.81
+  },
+  {
+    "nombre": "Borde fuerte",
+    "hex": "#c9d5df",
+    "rgb": [
+      201,
+      213,
+      223
+    ],
+    "cmyk": [
+      10,
+      4,
+      0,
+      13
+    ],
+    "rol": "Tablas y separadores",
+    "contraste_blanco": 1.49
+  },
+  {
+    "nombre": "Borde",
+    "hex": "#e1e8ed",
+    "rgb": [
+      225,
+      232,
+      237
+    ],
+    "cmyk": [
+      5,
+      2,
+      0,
+      7
+    ],
+    "rol": "Tarjetas",
+    "contraste_blanco": 1.24
+  },
+  {
+    "nombre": "Azul logotipo",
+    "hex": "#0130db",
+    "rgb": [
+      1,
+      48,
+      219
+    ],
+    "cmyk": [
+      100,
+      78,
+      0,
+      14
+    ],
+    "rol": "Continentes",
+    "contraste_blanco": 8.58
+  },
+  {
+    "nombre": "Cian logotipo",
+    "hex": "#00e4ff",
+    "rgb": [
+      0,
+      228,
+      255
+    ],
+    "cmyk": [
+      100,
+      11,
+      0,
+      0
+    ],
+    "rol": "Libro abierto",
+    "contraste_blanco": 1.55
+  },
+  {
+    "nombre": "Negro logotipo",
+    "hex": "#000000",
+    "rgb": [
+      0,
+      0,
+      0
+    ],
+    "cmyk": [
+      0,
+      0,
+      0,
+      100
+    ],
+    "rol": "Palabra y birrete",
+    "contraste_blanco": 21.0
+  }
+]

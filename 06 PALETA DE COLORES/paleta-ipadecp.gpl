@@ -1,0 +1,31 @@
+GIMP Palette
+Name: IPADECP
+Columns: 6
+#
+  6  20  43	Navy 900
+ 10  28  56	Navy 800
+ 16  40  77	Navy IPADECP
+ 28  61 107	Navy 600
+  0  19  49	Navy de texto
+232 238 246	Navy lavado
+244 247 250	Fondo suave
+ 11 102 131	Celeste profundo
+ 47 117 147	Celeste accesible
+108 179 211	Celeste IPADECP
+220 240 248	Celeste 100
+240 249 253	Celeste 050
+157  13  20	Rojo 700
+198  17  26	Rojo IPADECP
+253 240 241	Rojo 050
+173 132  32	Oro de glifo
+212 175  55	Oro de logro
+253 248 232	Oro 050
+ 31  45  61	Tinta
+ 90 104 120	Gris
+132 146 163	Gris tenue
+118 132 149	Borde de campo
+201 213 223	Borde fuerte
+225 232 237	Borde
+  1  48 219	Azul logotipo
+  0 228 255	Cian logotipo
+  0   0   0	Negro logotipo

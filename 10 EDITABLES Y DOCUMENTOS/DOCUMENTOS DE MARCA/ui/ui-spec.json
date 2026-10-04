@@ -1,0 +1,567 @@
+{
+  "$comentario": "IPADECP - especificacion de UI, legible por maquina. Es el ESQUELETO: paginas, secciones, familia de composicion e intencion. El copy completo de cada pantalla vive en prompts-stitch.md para no duplicarlo. Los tokens de color y tipografia viven en ../sistema/tokens.json, que es la fuente de verdad.",
+  "version": "1.0",
+  "fecha": "2026-09-02",
+  "tokens": "../sistema/tokens.json",
+  "prompts": "./prompts-stitch.md",
+  "preambulo": "./sistema-para-stitch.md",
+  "diales": {
+    "$comentario": "Lectura del proyecto: plataforma de confianza para trabajadores de salud, no sitio de agencia.",
+    "variacion": 6,
+    "movimiento": 4,
+    "densidad": 4
+  },
+  "reglasGlobales": {
+    "anchoMaximo": "1180px",
+    "altoHeader": "68px",
+    "ritmoSeccion": {
+      "escritorio": "96px",
+      "movil": "56px"
+    },
+    "puntosDeCorte": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280
+    },
+    "radios": {
+      "chip": "8px",
+      "boton": "10px",
+      "campo": "10px",
+      "tarjeta": "16px"
+    },
+    "prohibido": [
+      "esquinas de pildora (9999px) en botones o chips",
+      "rayas largas en texto visible",
+      "emojis en web, certificados y panel",
+      "marquesinas de logos que se desplazan solas",
+      "contadores que se reinician en cada visita y avisos de \"quedan N cupos\" sin stock real. Un contador con fecha real de fin de promocion SI es legitimo.",
+      "cintas o flechas de scroll",
+      "etiquetas superpuestas sobre fotos",
+      "interfaces de producto INVENTADAS y dibujadas con rectangulos. Las capturas REALES del aula si van, y conviene usarlas.",
+      "tres tarjetas identicas en fila como recurso por defecto",
+      "numerar secciones (01 / Servicios)",
+      "mas de una etiqueta en mayusculas cada tres secciones",
+      "afirmar o insinuar que el certificado esta avalado, acreditado, reconocido, autorizado o convalidado por alguna entidad",
+      "nombrar al MINSA, SUNEDU, colegios profesionales, universidades o ministerios, ni siquiera para decir que se cumplen sus estandares",
+      "prometer puntaje en concursos, ascensos o bonificaciones",
+      "mostrar logos de instituciones sin convenio firmado",
+      "simular pago en cuotas o mostrar el precio dividido entre meses",
+      "botones de prueba gratis, clase de muestra o demo",
+      "mencionar la certificacion directa: existe como canal interno, no como producto de la web",
+      "decir o insinuar que se certifica la experiencia previa (\"certifica tu experiencia\", \"valida tus anios de ejercicio\", \"convalidacion\", \"homologacion\")"
+    ],
+    "accesibilidad": {
+      "textoNormal": "4.5:1",
+      "textoGrandeEIconos": "3:1",
+      "etiquetaDeCampo": "siempre encima del campo, nunca placeholder como etiqueta",
+      "textoDeError": "debajo del campo, en #b53232",
+      "foco": "siempre visible"
+    }
+  },
+  "audiencia": {
+    "perfilA": {
+      "nombre": "Quiere estudiar",
+      "quien": "Enfermera, tecnica, obstetra o estudiante de salud, 22 a 40 anios",
+      "entra": "por la web, se registra sola",
+      "leImporta": [
+        "que el certificado sirva de verdad",
+        "el tiempo",
+        "el precio"
+      ],
+      "seDecide": "cuando ve que el certificado se verifica y que el material tiene fuentes"
+    },
+    "perfilB": {
+      "nombre": "Quiere certificar su experiencia",
+      "quien": "Personal con anios de ejercicio y sin papel que lo acredite. Suele ser mayor y de provincia",
+      "entra": "por WhatsApp",
+      "leImporta": [
+        "que el certificado llegue fisicamente",
+        "que sea valido"
+      ],
+      "regla": "NO debe toparse con un formulario largo antes de llegar al boton de WhatsApp",
+      "avisoWeb": "Este perfil existe en el negocio, pero la WEB NO le habla de certificacion directa ni de certificar experiencia. Todo lo publico va sobre adquirir un curso y estudiarlo."
+    }
+  },
+  "criterioDeAtencion": {
+    "1": "El verificador en vivo en la propia portada. Demostrar el diferencial en vez de afirmarlo. Nadie en el sector lo hace y la pagina de verificacion ya existe.",
+    "2": "Mostrar el certificado. Estan comprando un papel: hay que ensenarlo.",
+    "3": "Testimonios de pares con profesion y ciudad, no elogios genericos.",
+    "4": "Precio y que incluye, sin sorpresas. El envio a provincia se calcula antes de confirmar.",
+    "5": "Los dos caminos separados desde arriba.",
+    "6": "Sin horarios, desde el celular, el avance se guarda solo.",
+    "$comentario": "Que mueve a esta audiencia, en orden de impacto. Es el criterio que ordena las secciones de cada pagina."
+  },
+  "paginas": [
+    {
+      "id": "inicio",
+      "ruta": "/",
+      "prioridad": 1,
+      "objetivo": "Que la persona entienda en 10 segundos que el certificado se puede comprobar, y elija uno de los dos caminos.",
+      "secciones": [
+        {
+          "orden": 1,
+          "id": "anuncio",
+          "familia": "franja",
+          "intencion": "campania vigente",
+          "componenteExistente": "AnuncioBar"
+        },
+        {
+          "orden": 2,
+          "id": "header",
+          "familia": "header-pegado",
+          "intencion": "navegacion",
+          "componenteExistente": "HeaderPublico"
+        },
+        {
+          "orden": 3,
+          "id": "banner",
+          "familia": "carrusel-imagen",
+          "intencion": "campania del mes, cambia sin deploy",
+          "componenteExistente": "BannerPortada",
+          "medidas": {
+            "escritorio": "1600x500",
+            "movil": "1200x900"
+          },
+          "gestion": "panel admin, BannersSection"
+        },
+        {
+          "orden": 4,
+          "id": "hero",
+          "familia": "split-asimetrico-55-45",
+          "intencion": "propuesta de valor permanente, texto real indexable",
+          "componenteExistente": "HeroInicio",
+          "elementosDeTextoMaximo": 4
+        },
+        {
+          "orden": 5,
+          "id": "confianza",
+          "familia": "franja-de-cifras-con-hairlines",
+          "intencion": "prueba social dura",
+          "datosPendientes": true,
+          "componenteExistente": "ConfianzaStats"
+        },
+        {
+          "orden": 6,
+          "id": "verificador",
+          "familia": "banda-degradado-con-formulario",
+          "intencion": "DEMOSTRAR el diferencial, no afirmarlo",
+          "esLaClave": true,
+          "nuevo": true,
+          "acento": "rojo"
+        },
+        {
+          "orden": 7,
+          "id": "dos-caminos",
+          "familia": "bento-2-asimetrico",
+          "intencion": "separar perfil A de perfil B",
+          "nuevo": true
+        },
+        {
+          "orden": 8,
+          "id": "cursos-destacados",
+          "familia": "destacado-mas-lista",
+          "intencion": "entrada al catalogo",
+          "componenteExistente": "CursosDestacados",
+          "movil": "carrusel con scroll-snap"
+        },
+        {
+          "orden": 9,
+          "id": "como-funciona",
+          "familia": "linea-de-tiempo-horizontal",
+          "intencion": "quitar friccion percibida",
+          "componenteExistente": "SeccionComoFunciona"
+        },
+        {
+          "orden": 10,
+          "id": "que-incluye",
+          "familia": "bento-5",
+          "intencion": "valor del producto",
+          "componenteExistente": "SeccionMetodologia",
+          "requisito": "al menos 2 celdas con imagen o degradado real"
+        },
+        {
+          "orden": 11,
+          "id": "certificado",
+          "familia": "split-imagen-texto",
+          "intencion": "mostrar lo que se compra",
+          "componenteExistente": "SeccionCertificacion",
+          "acento": "rojo"
+        },
+        {
+          "orden": 12,
+          "id": "testimonios",
+          "familia": "rejilla-escalonada",
+          "intencion": "prueba social de pares",
+          "componenteExistente": "Testimonios",
+          "contenido": "MUESTRA, reemplazar antes de publicar",
+          "avatares": "public/img/avatares/"
+        },
+        {
+          "orden": 13,
+          "id": "preguntas",
+          "familia": "acordeon-2-columnas",
+          "intencion": "resolver objeciones"
+        },
+        {
+          "orden": 14,
+          "id": "cierre",
+          "familia": "banda-degradado-cta",
+          "intencion": "ultima conversion",
+          "componenteExistente": "CTAFinal"
+        }
+      ]
+    },
+    {
+      "id": "ficha-curso",
+      "ruta": "/curso/[id]",
+      "prioridad": 1,
+      "esLaPaginaDeProducto": true,
+      "referencia": "coderhouse.com/pe/cursos/ai-automation-avanzado, revisada contra la pagina real",
+      "objetivo": "Cerrar la compra sin que la persona pierda de vista el precio ni el boton.",
+      "layout": {
+        "escritorio": "2 columnas 62/38, la derecha pegada",
+        "movil": "1 columna con barra de compra fija abajo"
+      },
+      "componenteExistente": "FichaCursoClient",
+      "tarjetaDeCompra": {
+        "pegada": true,
+        "contiene": [
+          "imagen",
+          "precio antes tachado",
+          "precio ahora",
+          "chip de descuento",
+          "nota de pago unico",
+          "CTA principal",
+          "CTA WhatsApp",
+          "recuadro \"empiezas hoy mismo\"",
+          "lista de 5 inclusiones",
+          "medios de pago"
+        ]
+      },
+      "secciones": [
+        {
+          "orden": 1,
+          "id": "para-quien",
+          "familia": "lista-con-checks-2-col",
+          "intencion": "evitar la compra equivocada"
+        },
+        {
+          "orden": 2,
+          "id": "programa",
+          "familia": "lista-numerada-titulos-visibles-lecciones-plegadas",
+          "intencion": "profundidad escaneable",
+          "reglaDura": "los titulos de modulo NO se pliegan nunca; las lecciones si"
+        },
+        {
+          "orden": 3,
+          "id": "incluye",
+          "familia": "bento-5",
+          "intencion": "valor"
+        },
+        {
+          "orden": 4,
+          "id": "aula-por-dentro",
+          "familia": "split-captura-texto",
+          "intencion": "mostrar el producto real",
+          "fondo": "navy",
+          "nuevo": true,
+          "requisito": "capturas REALES del aula, nunca interfaces dibujadas"
+        },
+        {
+          "orden": 5,
+          "id": "certificado",
+          "familia": "split-imagen-texto",
+          "intencion": "mostrar el entregable",
+          "fondo": "navy",
+          "acento": "rojo",
+          "unicoLugarConRojo": true
+        },
+        {
+          "orden": 6,
+          "id": "opiniones",
+          "familia": "carrusel-testimonios",
+          "contenido": "MUESTRA"
+        },
+        {
+          "orden": 7,
+          "id": "preguntas",
+          "familia": "acordeon-plegado"
+        },
+        {
+          "orden": 8,
+          "id": "consulta",
+          "familia": "banda-degradado-cta",
+          "fondo": "navy"
+        }
+      ],
+      "diferenciasConLaReferencia": {
+        "sinCohortes": "Coderhouse vende clases EN VIVO y toda su pagina gira en \"Ver fechas\", con un bloque grande de proximas cohortes. IPADECP es 100 % asincronico: ese bloque NO existe y se reemplaza por la ventaja, \"empiezas hoy mismo\".",
+        "temarioHibrido": "Coderhouse muestra los 11 modulos siempre visibles. Este proyecto ya decidio plegar la ficha por una razon escrita en el codigo. Solucion intermedia: titulos de modulo siempre visibles y numerados, lecciones plegadas.",
+        "contador": "Un contador con fecha real de fin de promocion es legitimo. Lo prohibido es el que se reinicia en cada visita o el \"quedan N cupos\" sin stock real.",
+        "capturas": "Coderhouse simula su plataforma con interfaces dibujadas. IPADECP tiene aula real: van capturas REALES, incluida la gamificacion que ya existe (rachas, puntos, oro de logro)."
+      },
+      "ritmoDeFondos": "Claro por defecto. Navy con degradado de marca SOLO en tres momentos: el aula por dentro, el certificado y el cierre de WhatsApp.",
+      "bloquesSobreElContenido": [
+        {
+          "id": "datos-rapidos",
+          "familia": "tira-horizontal-con-hairlines",
+          "datos": [
+            "modalidad",
+            "duracion",
+            "modulos",
+            "nivel",
+            "certificado"
+          ],
+          "origen": "tomado de la referencia"
+        },
+        {
+          "id": "al-finalizar-podras",
+          "familia": "lista-de-3-checks",
+          "intencion": "resultados, no temario",
+          "origen": "tomado de la referencia"
+        },
+        {
+          "id": "barra-anclas",
+          "familia": "barra-pegada-bajo-header",
+          "intencion": "saltar entre secciones",
+          "origen": "tomado de la referencia"
+        }
+      ],
+      "noIncluir": [
+        "bloque de proximas fechas o cohortes",
+        "contadores sin fecha real",
+        "avisos de \"quedan N lugares\"",
+        "logos de empresas donde trabajan los egresados"
+      ]
+    },
+    {
+      "id": "catalogo",
+      "ruta": "/cursos",
+      "prioridad": 1,
+      "objetivo": "Que encuentre su curso con el pulgar, sin entrar a cada ficha para ver el precio.",
+      "componenteExistente": "CatalogoClient",
+      "reglasDuras": [
+        "los filtros van ARRIBA y son chips desplazables, no columna lateral",
+        "la tarjeta muestra el precio",
+        "nada superpuesto sobre la imagen"
+      ],
+      "estados": [
+        "normal",
+        "vacio-sin-resultados",
+        "cargando"
+      ]
+    },
+    {
+      "id": "verificacion",
+      "ruta": "/certificado/[codigo]",
+      "prioridad": 1,
+      "objetivo": "Responder una sola pregunta. Cero venta.",
+      "quienLlega": "un empleador o una jefatura de personal, NO un alumno",
+      "componenteExistente": "FichaCertificado",
+      "acento": "rojo",
+      "estados": [
+        "vigente",
+        "anulado",
+        "no-encontrado"
+      ],
+      "reglaDura": "el estado va PRIMERO, antes que cualquier dato"
+    },
+    {
+      "id": "carrito",
+      "ruta": "/carrito",
+      "prioridad": 2,
+      "familia": "panel-lateral",
+      "componenteExistente": "CarritoClient",
+      "estados": [
+        "con-items",
+        "vacio"
+      ]
+    },
+    {
+      "id": "checkout",
+      "ruta": "/checkout",
+      "prioridad": 2,
+      "layout": "2 columnas 60/40 con resumen pegado",
+      "componenteExistente": "CheckoutClient",
+      "reglasDuras": [
+        "sin navegacion completa",
+        "indicador de 3 pasos",
+        "etiqueta arriba del campo",
+        "error debajo del campo"
+      ]
+    },
+    {
+      "id": "registro",
+      "ruta": "/registro",
+      "prioridad": 2,
+      "familia": "split-degradado-formulario"
+    },
+    {
+      "id": "login",
+      "ruta": "/login",
+      "prioridad": 2,
+      "familia": "split-degradado-formulario",
+      "variante": "misma composicion que registro"
+    },
+    {
+      "id": "activar",
+      "ruta": "/activar",
+      "prioridad": 2,
+      "objetivo": "Perfil B, suele ser mayor y entra desde el celular",
+      "reglaDura": "el campo del codigo de 6 digitos va en casillas separadas de 56px, monoespaciada"
+    },
+    {
+      "id": "aula",
+      "ruta": "/aula",
+      "prioridad": 3,
+      "familia": "sidebar-navy-mas-contenido",
+      "componenteExistente": "AulaShell",
+      "estados": [
+        "con-cursos",
+        "vacio"
+      ]
+    },
+    {
+      "id": "aula-curso",
+      "ruta": "/aula/curso/[id]",
+      "prioridad": 3,
+      "familia": "3-zonas",
+      "estados": [
+        "leccion-activa",
+        "modulo-bloqueado"
+      ]
+    },
+    {
+      "id": "aula-evaluacion",
+      "ruta": "/aula/evaluacion/[tareaId]",
+      "prioridad": 3,
+      "estados": [
+        "en-curso",
+        "enviada",
+        "aprobada",
+        "desaprobada"
+      ]
+    },
+    {
+      "id": "certificados",
+      "ruta": "/certificado",
+      "prioridad": 3,
+      "familia": "lista-de-tarjetas-horizontales",
+      "estados": [
+        "con-certificados",
+        "vacio"
+      ]
+    },
+    {
+      "id": "nosotros",
+      "ruta": "/nosotros",
+      "prioridad": 2,
+      "familia": "editorial"
+    },
+    {
+      "id": "contacto",
+      "ruta": "/contacto",
+      "prioridad": 2,
+      "familia": "2-columnas-formulario-datos",
+      "componenteExistente": "ContactoClient"
+    },
+    {
+      "id": "legales",
+      "rutas": [
+        "/terminos-servicio",
+        "/politica-privacidad",
+        "/politica-reembolso",
+        "/cookies",
+        "/reclamos"
+      ],
+      "prioridad": 4,
+      "familia": "documento-con-indice-pegado",
+      "$comentario": "Un solo patron para las cinco rutas. /reclamos usa formulario en vez de texto."
+    }
+  ],
+  "fueraDeAlcance": {
+    "admin": {
+      "rutas": [
+        "/admin",
+        "/admin/login",
+        "/admin/rotulo-pedido/[id]"
+      ],
+      "motivo": "Interfaz densa de gestion: tablas, filtros, emision masiva y rotulos de envio. Stitch esta hecho para pantallas de producto y marketing; para un panel devuelve una maqueta que no soporta la densidad real de datos. Ya funciona con shadcn: se le aplican solo los tokens de marca."
+    }
+  },
+  "contenidoDeMuestra": {
+    "advertencia": "Todo lo marcado como MUESTRA es material de maqueta. Reemplazar por contenido real antes de publicar.",
+    "testimonios": [
+      {
+        "texto": "Lo lleve en las noches despues del turno. El material en Word me sirvio para capacitar a mi propio servicio.",
+        "nombre": "Milagros Quispe Ccahuana",
+        "rol": "Enfermera",
+        "ciudad": "Huancayo",
+        "avatar": "avatar-1-enfermera.jpeg"
+      },
+      {
+        "texto": "Trabajo hace once anios y no tenia nada que lo respaldara. El sobre me llego a Juliaca en cinco dias.",
+        "nombre": "Rosa Ccopa Mamani",
+        "rol": "Enfermera",
+        "ciudad": "Juliaca",
+        "avatar": "avatar-3-enfermera-experiencia.jpeg"
+      },
+      {
+        "texto": "En el concurso escanearon el QR delante mio y salio al toque. Eso me tranquilizo.",
+        "nombre": "Elmer Huaman Vargas",
+        "rol": "Tecnico de laboratorio",
+        "ciudad": "Trujillo",
+        "avatar": "avatar-4-tecnico-laboratorio.jpeg"
+      },
+      {
+        "texto": "Estudie desde el celular en los descansos. El avance se guardaba solo y no perdi nada.",
+        "nombre": "Jhoselyn Ramirez Tapia",
+        "rol": "Obstetra",
+        "ciudad": "Piura",
+        "avatar": "avatar-5-estudiante-obstetricia.jpeg"
+      }
+    ],
+    "cifrasPendientes": [
+      "[N.º de alumnos certificados]",
+      "[N.º de cursos en catalogo]",
+      "[convenios o respaldos institucionales]"
+    ]
+  },
+  "decisionesResueltas": {
+    "fecha": "2026-09-02",
+    "cuotas": {
+      "respuesta": "NO",
+      "detalle": "No hay financiamiento. Pago unico. Se dice en positivo: \"Pago unico. Sin mensualidades.\" Prohibido simular cuotas o mostrar el precio dividido entre meses."
+    },
+    "moduloGratis": {
+      "respuesta": "NO",
+      "detalle": "No se da acceso gratuito a ningun modulo. Prohibidos los botones de prueba gratis, clase de muestra o demo. La incertidumbre se reduce con el temario visible, la captura real del aula y la salida de WhatsApp."
+    },
+    "dondeValeElCertificado": {
+      "respuesta": "NO",
+      "detalle": "No se hace esa seccion. El instituto todavia NO tiene validacion ni reconocimiento de ninguna entidad externa."
+    }
+  },
+  "limiteDeAfirmaciones": {
+    "$comentario": "Limite duro. El instituto no tiene acreditacion externa. /nosotros ya lo dice de frente y es el modelo: el resto del sitio no debe contradecirlo.",
+    "noSePuedeAfirmar": [
+      "avalado",
+      "acreditado",
+      "reconocido oficialmente",
+      "autorizado por",
+      "convalidado",
+      "otorga creditos academicos",
+      "reemplaza la colegiatura",
+      "da puntaje en concursos"
+    ],
+    "siSePuedeAfirmar": [
+      "se puede comprobar en segundos",
+      "verificable por QR sin cuenta",
+      "emitido desde nuestros registros",
+      "con bibliografia fechada y rastreable"
+    ],
+    "porQue": "Verificable es el unico terreno donde IPADECP gana, y no necesita el permiso de nadie para decirlo."
+  },
+  "promesa": "Lleva tu curso y termina con un certificado verificable."
+}
